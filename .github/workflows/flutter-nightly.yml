@@ -5,10 +5,7 @@ on:
     # schedule build every night
     - cron: "0 0 * * *"
   workflow_dispatch:
-branches: [
--    { name: "main", channel: "latest" },
-+    { name: "main", channel: "latest", prerelease: false },
- ]
+
 
 jobs:
   run-flutter-nightly-build:
@@ -17,3 +14,4 @@ jobs:
     with:
       upload-artifact: true
       upload-tag: "nightly"
+      prerelease: false
