@@ -14,4 +14,4 @@ jobs:
     with:
       upload-artifact: true
       upload-tag: "nightly"
-      prerelease: false
+     
